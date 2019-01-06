@@ -1,13 +1,15 @@
-import {createServer} from 'http';
+import app from './app'
+import initializeDatabase from './db'
 
-const whenRequestReceived = (req,res) =>{
+const start = async () => {
+  const controller = await initializeDatabase()
+  app.get('/', (req, res) => res.send("ok"));
 
-    res.writeHead(200,{'Content-type':`text/plain`})
-    res.write("hello")
-
-    res.end()
+  app.get('/contacts/list', async (req, res) => {
+    const contacts_list = await controller.getContactsList()
+    res.json(contacts_list)
+  })
+  
+  app.listen(8080, () => console.log('server listening on port 8080'))
 }
-
-const server = createServer(whenRequestReceived)
-
-server.listen(8080,()=>{console.log('we are here')})
+start();
