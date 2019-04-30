@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rakon1/full-project.git"
+    "url": "git+https://github.com/Yazid-Krayem/full-project.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rakon1/full-project/issues"
+    "url": "https://github.com/Yazid-Krayem/full-project/issues"
   },
-  "homepage": "https://github.com/rakon1/full-project#readme",
+  "homepage": "https://github.com/Yazid-Krayem/full-project#readme",
   "dependencies": {
     "concurrently": "^4.1.0",
     "postinstall": "^0.4.2"
